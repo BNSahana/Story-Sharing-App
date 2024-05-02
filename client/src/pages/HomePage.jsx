@@ -43,7 +43,7 @@ const HomePage = () => {
     const validateToken = async () => {
       try {
         const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/auth/validate`,
+          `${process.env.REACT_APP_BACKEND_URL}/api/auth/validate`,
           {
             method: "GET",
             headers: {
