@@ -1,0 +1,69 @@
+.filter__container {
+  max-height: 400px;
+  border: 1px solid #fff;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  padding: 30px 20px 0px;
+  scroll-behavior: smooth;
+}
+
+.filter__container::-webkit-scrollbar {
+  width: 0;
+}
+
+.filter__wrapper {
+  position: relative;
+  min-width: 220px;
+  height: 220px;
+  border-radius: 1.5rem;
+  border: 4px solid transparent;
+  overflow: hidden;
+}
+
+.filter__box {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+
+.filter__name {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .filter__box,
+  .filter__wrapper {
+    min-width: 180px;
+    height: 180px;
+    border-radius: 20px;
+  }
+
+  .filter__box {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter__wrapper {
+    min-width: 200px;
+    height: 100px;
+  }
+
+  .filter__box {
+    min-width: 200px;
+    height: 100px;
+    border-radius: 20px;
+  }
+}

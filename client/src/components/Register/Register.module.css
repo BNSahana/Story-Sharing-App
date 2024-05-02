@@ -1,0 +1,108 @@
+.form__header {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.form__success {
+  font-size: 1.5rem;
+}
+.signIn__btn {
+  color: #000;
+  font-weight: 700;
+  background-color: #73abff;
+}
+
+.form__container {
+  width: 70%;
+  font-weight: 700;
+}
+
+.form__container div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.form__container label {
+  width: 100px;
+  font-size: 1.2rem;
+}
+.form__container input {
+  padding: 10px;
+  width: 250px;
+  color: #000;
+  font-weight: 700;
+  border: 2px solid #8e8e8e;
+}
+
+.form__container button {
+  background-color: #73abff;
+  color: #000;
+  font-weight: 700;
+}
+.password__container {
+  position: relative;
+}
+
+.password__icon {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.error {
+  color: #ff0e0e;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.click__here {
+  color: #000;
+}
+
+@media (max-width: 576px) {
+  .form__header {
+    font-size: 1.5rem;
+  }
+  .form__success {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .form__container div {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .form__container label {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+  .password__icon {
+    right: 10px;
+    top: 75%;
+  }
+}
+
+@media (max-width: 515px) {
+  .password__icon {
+    right: 20px;
+    top: 75%;
+  }
+  .form__container label {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .password__icon {
+    right: 0;
+    top: 75%;
+  }
+  .form__container label {
+    text-align: center;
+    font-size: 0.8rem;
+  }
+}

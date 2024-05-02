@@ -1,0 +1,97 @@
+.slide__container {
+  width: 95%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.slide__number,
+.add__slide {
+  position: relative;
+  width: 100%;
+  min-height: 65px;
+  height: 100%;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid transparent;
+  font-weight: 700;
+  box-shadow: 0px 4px 15px 0px #0000001a;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.modalclose__icon {
+  position: absolute;
+  top: -7px;
+  right: -7px;
+  scale: 0.5;
+  cursor: pointer;
+}
+
+.form__container {
+  width: 100%;
+  font-weight: 700;
+}
+
+.form__container div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.form__container label {
+  width: 100px;
+  font-size: 1.2rem;
+}
+
+.form__container input,
+.form__container select,
+.form__container textarea {
+  padding: 10px;
+  width: 250px;
+  color: #030303;
+  font-weight: 700;
+  border: 2px solid #8e8e8e;
+}
+.form__header {
+  text-align: center;
+}
+.header {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+.btn__container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.leftbtn__container {
+  display: flex;
+  gap: 10px;
+}
+
+.prev__btn {
+  background-color: #7eff73;
+}
+
+.next__btn {
+  background-color: #73abff;
+}
+
+.post__btn {
+  background-color: #ff7373;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+}

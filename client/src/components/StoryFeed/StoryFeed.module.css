@@ -1,0 +1,46 @@
+.wrapper {
+  position: relative;
+}
+
+.category__story {
+  height: 32rem;
+  width: auto;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px 20px;
+  margin: 20px;
+}
+
+.category__story__header {
+  font-size: 1.5rem;
+}
+
+.category__story button {
+  width: 110px;
+}
+
+.edit__btn {
+  position: absolute;
+  bottom: 0px;
+  right: 50%;
+  transform: translateX(50%);
+  color: black;
+  font-weight: 700;
+  background-color: white;
+
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.edit__btn__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
