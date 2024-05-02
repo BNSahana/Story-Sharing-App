@@ -30,7 +30,7 @@ dotenv.config();
 
 app.use(express.json()); // to parse the incoming requests with JSON payloads(from req.body)
 
-app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes); 
 app.use("/api/story", storyRoutes);
 app.use("/api/slide", slideRoutes);
 app.use("/api/user", userRoutes);

@@ -5,7 +5,7 @@ const backendUrl = process.env.REACT_APP_BACKEND_URL;
 export const fetchYourStories = async (selectedFilters) => {
   try {
     const response = await axios.post(
-      `${backendUrl}/user/posts`,
+      `${backendUrl}/api/user/posts`,
       { filters: selectedFilters },
       {
         headers: {
@@ -28,7 +28,7 @@ export const fetchYourStories = async (selectedFilters) => {
 export const addBookmark = async (slideId) => {
   try {
     const response = await axios.post(
-      `${backendUrl}/user/addBookmark`,
+      `${backendUrl}/api/user/addBookmark`,
       { slideId },
       {
         headers: {
@@ -50,7 +50,7 @@ export const addBookmark = async (slideId) => {
 
 export const fetchBookmarks = async () => {
   try {
-    const response = await axios.get(`${backendUrl}/user/bookmarks`, {
+    const response = await axios.get(`${backendUrl}/api/user/bookmarks`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `${localStorage.getItem("token")}`,
@@ -69,7 +69,7 @@ export const fetchBookmarks = async () => {
 export const removeBookmark = async (slideId) => {
   try {
     const response = await axios.post(
-      `${backendUrl}/user/removeBookmark`,
+      `${backendUrl}/api/user/removeBookmark`,
       { slideId },
       {
         headers: {
@@ -92,7 +92,7 @@ export const removeBookmark = async (slideId) => {
 export const likeSlide = async (slideId) => {
   try {
     const response = await axios.post(
-      `${backendUrl}/user/like`,
+      `${backendUrl}/api/user/like`,
       { slideId },
       {
         headers: {
@@ -115,7 +115,7 @@ export const likeSlide = async (slideId) => {
 export const fetchSlide = async (slideId) => {
   try {
     const response = await axios.get(
-      `${backendUrl}/slide/slideDetails/${slideId}`,
+      `${backendUrl}/api/slide/slideDetails/${slideId}`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -136,7 +136,7 @@ export const fetchSlide = async (slideId) => {
 
 export const fetchCategoryStories = async (category) => {
   try {
-    const response = await axios.get(`${backendUrl}/story/${category}`);
+    const response = await axios.get(`${backendUrl}/api/story/${category}`);
     if (response.status === 200) {
       return response.data.posts;
     } else {
