@@ -1,4 +1,4 @@
-// import path from "path";
+import path from "path";
 import dotenv from "dotenv";
 import express from "express";
 import cors from "cors";
@@ -20,11 +20,11 @@ const app = express();
 const corsOptions = {
     origin: "*",
   };
-  app.use(cors());
+  app.use(cors(corsOptions));
 
 const PORT = process.env.PORT || 5005;
 
-// const __dirname = path.resolve();
+const __dirname = path.resolve();
 
 dotenv.config();
 
@@ -42,11 +42,11 @@ app.get("/", (req, res) => {
 
 app.use(errorHandler);
 
-// app.use(express.static(path.join(__dirname, "../client/dist")));
+app.use(express.static(path.join(__dirname, "./client/build")));
 
-// app.get("*", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "../client", "dist", "index.html"));
-// });
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "./client", "build", "index.html"));
+});
 
 app.listen(PORT, () => {
   connectToMongoDB();
