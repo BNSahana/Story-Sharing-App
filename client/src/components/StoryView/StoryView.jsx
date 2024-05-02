@@ -10,7 +10,7 @@ import redLikeIcon from "../../assets/likedIcon.png";
 import leftArrow from "../../assets/leftArrow.png";
 import rightArrow from "../../assets/rightArrow.png";
 import axios from 'axios';
-import { addBookmark, removeBookmark, likeSlide } from "../../api/story";
+import { addBookmark, removeBookmark } from "../../api/story";
 
 const StoryView = (props) => {
   const navigate = useNavigate();
@@ -104,7 +104,7 @@ const handleLike = async (slideIndex) => {
   try {
     const slideId = slides[slideIndex]._id;
     const response = await axios.post(
-      `${process.env.REACT_APP_BACKEND_URL}/user/like`,
+      `${process.env.REACT_APP_BACKEND_URL}/api/user/like`,
       { slideId },
       {
         headers: {
